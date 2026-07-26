@@ -1,0 +1,310 @@
+/* =========================================
+   Estilos Generales - Basados en tu imagen
+   ========================================= */
+
+:root {
+    /* Colores extraídos y adaptados de tu post de Reiki */
+    --color-fondo: #F5EFEB; /* Crema suave para el fondo principal */
+    --color-texto: #5B6D5A; /* Verde salvia elegante para el texto */
+    --color-secundario: #E8E0D8; /* Crema ligeramente más oscuro para fondos alternos */
+    --color-acento: #8A9D87; /* Un verde un poco más claro para botones/acentos */
+    --color-texto-alt: #FFFFFF; /* Blanco para texto sobre botones oscuros */
+    --font-header: 'Playfair Display', serif; /* Elegante, similar al "Reiki" de tu imagen */
+    --font-body: 'Source Sans Pro', sans-serif; /* Limpia y legible */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-header);
+    font-weight: normal;
+    color: var(--color-texto);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   Mandalas de Fondo (efecto sutil)
+   ========================================= */
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><path d="M200 400C89.5 400 0 310.5 0 200S89.5 0 200 0s200 89.5 200 200-89.5 200-200 200zm0-394C92.9 6 6 92.9 6 200s86.9 194 194 194 194-86.9 194-194S307.1 6 200 6z" fill="%23E8E0D8" opacity="0.3"/><path d="M200 376c-97.1 0-176-78.9-176-176S102.9 24 200 24s176 78.9 176 176-78.9 176-176 176zm0-346C106.3 30 30 106.3 30 200s76.3 170 170 170 170-76.3 170-170S293.7 30 200 30z" fill="%23E8E0D8" opacity="0.2"/></svg>'); /* Generado con SVG para ligereza */
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =========================================
+   Header y Menú
+   ========================================= */
+
+header {
+    background-color: var(--color-fondo);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--color-texto);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* =========================================
+   Sección Hero
+   ========================================= */
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--color-fondo);
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* Botón general */
+.btn {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-texto-alt);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: var(--color-texto);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   Secciones de Información
+   ========================================= */
+
+.info-section {
+    padding: 80px 0;
+}
+
+.info-section h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.text-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fondo alterno para Barras Access */
+.alt-bg {
+    background-color: var(--color-secundario);
+}
+
+/* =========================================
+   Sección Sobre Mí
+   ========================================= */
+
+.about-section {
+    padding: 80px 0;
+}
+
+.about-section .flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%; /* Estilo circular */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+/* =========================================
+   Sección Contacto
+   ========================================= */
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-section h3 {
+    font-size: 2.5rem;
+}
+
+.wsp-btn-big {
+    display: inline-block;
+    background-color: #25D366; /* Verde oficial de WhatsApp */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.wsp-btn-big:hover {
+    background-color: #1EB956;
+    transform: scale(1.05);
+}
+
+.wsp-btn-big i {
+    margin-right: 10px;
+}
+
+/* =========================================
+   Pie de Página y Botón Flotante
+   ========================================= */
+
+footer {
+    background-color: var(--color-fondo);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-secundario);
+}
+
+/* Botón flotante de WhatsApp */
+.wsp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25D366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 0.3s ease;
+}
+
+.wsp-float:hover {
+    background-color: #1EB956;
+    transform: scale(1.1);
+}
+
+.my-float{
+    margin-top:16px;
+    font-size: 24px;
+}
+
+/* =========================================
+   Responsive - Para Celulares y Tablets
+   ========================================= */
+
+@media (max-width: 768px) {
+    .container {
+        width: 85%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav li {
+        margin: 0 10px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .info-section h3, .about-section h3, .contact-section h3 {
+        font-size: 2rem;
+    }
+
+    .about-section .flex {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        max-width: 200px;
+    }
+}
